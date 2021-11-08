@@ -1,0 +1,58 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "cmake",
+			"type": "shell",
+			"options": {
+				"cwd": "${workspaceRoot}/build"
+			},
+			"command": "cmake",
+			"args": [
+				"-G",
+				"'MinGW Makefiles'",
+				"./.."
+			]
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++: gcc.exe debug build active file",
+			"command": "D:\\MinGW\\bin\\gcc.exe",
+			"args": [
+				"-g", "-std=c99", "${file}", "-o", "${workspaceFolder}\\bin\\debug\\${fileBasenameNoExtension}.exe",
+				"-lSDL2", "-lSDL2main", "-I D:\\MinGW\\include\\SDL2", "-I${workspaceFolder}\\inc"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: D:\\MinGW\\bin\\gcc.exe"
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++: gcc.exe release build active file",
+			"command": "D:\\MinGW\\bin\\gcc.exe",
+			"args": [
+				"-O3", "-std=c99", "${file}", "-o", "${workspaceFolder}\\bin\\release\\${fileBasenameNoExtension}.exe",
+				"-lSDL2", "-lSDL2main", "-I D:\\MinGW\\include\\SDL2", "-I${workspaceFolder}\\inc"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: D:\\MinGW\\bin\\gcc.exe"
+		}
+	]
+}
