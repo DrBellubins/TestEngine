@@ -2,6 +2,7 @@
     "files.associations": {
         "sdl.h": "c",
         "engine.h": "c",
-        "gamewindow.h": "c"
+        "gamewindow.h": "c",
+        "stdio.h": "c"
     }
 }
